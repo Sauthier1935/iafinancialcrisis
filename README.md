@@ -11,4 +11,4 @@ To obtain the best parameters for building these models, we use the GridsearchCV
 
 Finally, after exploring the search for better parameters and creating other dataset proposals, we ran our predictive models and used the accuracy, precision, recall, F1-sccore and ROC curve metrics to observe the winning models.
 
-We interpret that the RF model, initially using the cross-validation method, obtained the best results and we are confident that our model can help in future work. However, when using the ROC curve, now with the train_test_split method, the RD and LSTM models obtained results that should be considered.
+We interpret that the RF model, initially using the cross-validation method, obtained the best results and we are confident that our model can help in future work. However, when using the ROC curve, now with the train_test_split method, the RF and LSTM models obtained results that should be considered.
