@@ -12,3 +12,17 @@ To obtain the best parameters for building these models, we use the GridsearchCV
 Finally, after exploring the search for better parameters and creating other dataset proposals, we ran our predictive models and used the accuracy, precision, recall, F1-sccore and ROC curve metrics to observe the winning models.
 
 We interpret that the RF model, initially using the cross-validation method, obtained the best results and we are confident that our model can help in future work. However, when using the ROC curve, now with the train_test_split method, the RF and LSTM models obtained results that should be considered.
+
+Machine and Deep learning para predição de crises financeiras
+
+Partimos desde a identificação de um dataset que está nas pastas deste trabalho. Após, realizados esforços para ampliar a quantidade de dados, na crença de que mais dados, podemos aumentar a precisão e acurácia dos nossos modelos. Assim, nossos esforços foram concentrados em transformar os dados brutos obtidos em indicadores que podem ser utilizados para a previsão de crises financeiras. Nosso dataset possui uma variável resposta que indica se a instância país-ano teve crise. Como queremos prevrer crises financeiras, nossas transformações no dataset, além de construir atributos que podem indicar crise, a variável resposta indicadora de crise foi adiantada para 2 anos antes da crise de fato acontecer. Ainda, perídos complicados da história foram removidos, tais como a crise financeira de 1929 e as duas grandes guerras do século passado.
+
+Após a criação do dataset, removemos o problema de outliers: uma vez que temos poucas ocorrencias de crises registradas, o problema de crises financeiras acaba por aparecer pouco na variável resposta. Sendo assim, utilizamos o método SMOTE para balancear nosso dataset e utilizamos o método Shuffle para embaralhar as novas instâncias.
+
+Finalmente, aplicamos os modelos preditivos: Regressão Logística (LogR), Support Vector Machine (SVM), Neural Networks (NN), Random Forests (RF) e Long short-term memory (LSTM).
+
+Para obter os melhores parametros para a construção desses modelos, utilizamos o método GridsearchCV para encontrá-los.
+
+Finalmente, após a exploração de busca de melhores parâmetros e criação de outras propostas de datasets, rodamos nossos modelos preditivos e utilizamos as métricas acurácia, precisão, recall, F1-sccore e curva ROC para observar os modelos vencedores.
+
+Interpretamos que o modelo  RF, inicialmente utilizando o métdo de validação cruzada, obteve os melhores resultados e estamos confiantes que nosso modelo pode auxiliar em trabalhos futuros. No entanto, ao utilizar a curva ROC, agora com o método train_test_split, os modelos RF e LSTM obtiveram resultados que decem ser considerados.
